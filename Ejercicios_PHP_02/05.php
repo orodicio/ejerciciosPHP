@@ -16,7 +16,7 @@ function generarHTMLTable($filas, $columnas, $borde, $contenido)
         echo '</tr>';   
     }
 }
-generarHTMLTable(5,5,1,olalla);
+generarHTMLTable(5,3,1,"olalla");
 
 ?>
 </body>
