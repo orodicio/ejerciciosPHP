@@ -1,8 +1,8 @@
 
 <?php
-print "<pre>";
+/*print "<pre>";
 print_r($_REQUEST);
-print "</pre>\n";
+print "</pre>\n";*/
 
 $usuario = recoge("usuario");
 $contraseña = recoge("contraseña");
@@ -18,7 +18,7 @@ function recoge($var)
 
 function accesoPermitido($usuario, $contraseña, $contraseñas){
 foreach($contraseñas as $key => $value){
-    if($key == $usuario && $value==contraseña){
+    if($key == $usuario && $value==$contraseña){
         echo "<h1>Acceso permitido</h1>";
         return;
     }    
@@ -26,5 +26,5 @@ foreach($contraseñas as $key => $value){
     echo "<h1>Acceso denegado</h1>";
     return;
 }
-   
+ accesoPermitido($usuario, $contraseña, $contraseñas); 
 ?>
