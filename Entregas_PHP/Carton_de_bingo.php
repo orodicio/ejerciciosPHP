@@ -110,26 +110,6 @@ $fila6 = array_fill(0, 9, 0);
 $nums1 = array_fill(0, 5, 9);
 $nums2 = array_fill(0, 5, 9);
 $nums3 = array_fill(0, 5, 9);
-echo '<pre>';
-print_r($nums1);
-echo '</pre>';
-echo '<pre>';
-print_r($nums2);
-echo '</pre>';
-echo '<pre>';
-print_r($nums3);
-echo '</pre>';
-echo '<pre>';
-print_r($fila4);
-echo '</pre>';
-echo '<pre>';
-print_r($fila5);
-echo '</pre>';
-echo '<pre>';
-print_r($fila6);
-echo '</pre>';
-
-
 
 for ($e = 0; $e < 5; $e ++) {
     $posicion = random_int(0, 8);
@@ -140,14 +120,14 @@ for ($e = 0; $e < 5; $e ++) {
 }
 for ($e = 0; $e < 5; $e ++){
     $posicion = random_int(0, 8);
-    while(in_array($posicion, $nums1)){
+    while (in_array($posicion, $nums2)) {
+        $posicion = random_int(0,8);
+    }
+        if(in_array($posicion, $nums1)){
             $anteriorpos=$posicion-1;
             $posteriorpos=$posicion+1;
-            while((in_array($anteriorpos, $nums1) && in_array($anteriorpos,$nums2))|| (in_array ($posteriorpos, $nums1) && in_array($posteriorpos,$nums2))){
+            while((in_array($anteriorpos, $nums1) && in_array($anteriorpos,$nums2))|| (in_array ($posteriorpos, $nums1) && in_array($posteriorpos,$nums2))|| in_array($posicion, $nums2)){
                 $posicion = random_int(0,8);
-                while (in_array($posicion, $nums2)){
-                    $posicion = random_int(0,8);
-            }
     }
     }
  
@@ -157,32 +137,22 @@ for ($e = 0; $e < 5; $e ++){
     $posicion = random_int(0, 8);
     while (in_array($posicion, $nums3)){
         $posicion = random_int(0,8);
+    }
         if(in_array($posicion, $nums2)){
             $anteriorpos=$posicion-1;
             $posteriorpos=$posicion+1;
-            while((in_array($anteriorpos, $nums2) && in_array($anteriorpos,$nums3))|| (in_array ($posteriorpos, $nums2) && in_array($posteriorpos,$nums3))){
+            while((in_array($anteriorpos, $nums3) && in_array($anteriorpos,$nums3))|| (in_array ($posteriorpos, $nums2) && in_array($posteriorpos,$nums3))|| in_array($posicion, $nums3)){
                 $posicion = random_int(0,8);
             }
         }
-        while(in_array($posicion, $nums1) && in_array($posicion, $nums2)&& in_array($posicion, $nums3)){
+        while((in_array($posicion, $nums1) && in_array($posicion, $nums2)) || in_array($posicion, $nums3)){
             $posicion = random_int(0,8);     
     }
-    }
     $nums3[$e]=$posicion;
-}
+    }
 
 
 
-echo '<pre>';
-print_r($nums1);
-echo '</pre>';
-echo '<pre>';
-print_r($nums2);
-echo '</pre>';
-echo '<pre>';
-print_r($nums3);
-echo '</pre>';
-exit();
 for ($r = 0; $r < 5; $r ++) {
     $posicion = $nums1[$r];
     $fila4[$posicion] = 1;
@@ -216,8 +186,9 @@ for ($m = 0; $m < 3; $m ++) {
     echo '<tr>';
     for ($j = 0; $j < 9; $j ++) {
         $valor = $carton[$m][$j];
+        $mostrar= $blancos[$m][$j];
         echo '<td>';
-        if ($blancos[$m][$j] == 0) {
+        if ( $mostrar == 0) {
             echo '&nbsp';
         } else {
             echo "$valor";
