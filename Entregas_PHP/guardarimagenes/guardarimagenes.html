@@ -1,0 +1,17 @@
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<h2>Subida y alojamiento de archivo en el servidor</h2>
+<form name="f1" enctype="multipart/form-data" action="guardarimagenes.php" method="POST">
+<label for="nombre">Indique su nombre</label>
+<input type="text" name="nombre"><br>
+<input type="hidden" name="MAX_FILE_SIZE" value="200000" />
+<label>Elija los archivos a subir</label> <input name="archivo1" type="file" /> <br />
+<input type="hidden" name="MAX_FILE_SIZE" value="200000" />
+<label>Elija el segundo archivo a subir</label> <input name="archivo2" type="file" /> <br />
+<input type="submit" value="Subir archivo" />
+</form>
+</body>
+</html>

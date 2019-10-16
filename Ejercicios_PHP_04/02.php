@@ -45,7 +45,7 @@ background-color:green;
 	<td><button type="submit" name="operacion" value="+">+</button></td>
 	<td><button type="submit" name="operacion" value="-">-</button></td>
 	<td><button type="submit" name="operacion" value="*">*</button></td>
-	<td><button type="submit" name="operacion" value="/">-</button></td>
+	<td><button type="submit" name="operacion" value="/">/</button></td>
     </tr>
 <?php
 function recoge($var)
@@ -82,7 +82,7 @@ if ($metrica =="hexadecimal"){
 }
 echo <<<foo
     <tr>
-    <td colspan="4" style="background-color:white">.$resultado.</td>
+    <td colspan="4" style="background-color:white">$resultado</td>
     </tr>
 foo;
 

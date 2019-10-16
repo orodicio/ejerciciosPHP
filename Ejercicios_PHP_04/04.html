@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>04</title>
+<style type="text/css">
+table {
+	width: 28%;
+	font-size: 15px;
+	font-family: sans-serif;
+}
+
+table, th {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+th {
+	text-align: center;
+	color: white;
+	background-color: blue;
+	padding: 3%;
+	font-size: 25px;
+}
+
+td {
+	text-align: left;
+	color: grey;
+	padding-left: 3%;
+	padding-top: 1%;
+}
+
+hr {
+	border: 1.5px solid grey;
+	width: 96%;
+	margin-left: 0%;
+	background-color: grey;
+	border-radius: 20%;
+}
+
+#bottom {
+	margin-bottom: 5%;
+	padding-right: 3%;
+}
+
+.round {
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding: 1% 2% 1% 2%;
+}
+
+.titulo {
+	font-weight: bold;
+}
+
+#arriba {
+	padding-top: 5%;
+}
+
+.abajo {
+	padding-bottom: 3%
+}
+</style>
+</head>
+<body>
+	<form action="http://localhost/ejercicios/Ejercicios_PHP_04/04.php"
+		method="get">
+		<table>
+			<tr>
+				<th>Formulario con múltiples campos</th>
+			</tr>
+			<tr>
+				<td id="arriba" class="titulo">CAMPOS DE TEXTO:</td>
+			</tr>
+			<tr>
+				<td>Nombre: <input type="text" name="nombre" class="round"
+					size="30"></td>
+			</tr>
+			<tr>
+				<td>Contraseña: <input type="password" name="contraseña"
+					class="round" size="30">
+					<hr></td>
+			</tr>
+			<tr>
+				<td class="titulo">RADIO:</td>
+			</tr>
+			<tr>
+				<td>Rojo: <input type="radio" name="semaforo" value="rojo"
+					checked></td>
+			</tr>
+			<tr>
+				<td>Naranja: <input type="radio" name="semaforo"
+					value="naranja"></td>
+			</tr>
+			<tr>
+				<td>Verde: <input type="radio" name="semaforo" value="verde">
+					<hr></td>
+			</tr>
+			<tr>
+				<td class="titulo">CHECKBOX:</td>
+			</tr>
+			<tr>
+				<td>Quiero recibir publicidad<input type="checkbox"
+					name="publicidad"></td>
+			</tr>
+			<tr>
+				<td class="titulo">MULTI CHECKBOX:</td>
+			</tr>
+			<tr>
+				<td>Inglés<input type="checkbox" name="idiomas[1]"
+					value="Inglés">&nbsp;&nbsp;&nbsp;&nbsp;Francés<input
+					type="checkbox" name="idiomas[2]" value="Francés">&nbsp;&nbsp;&nbsp;&nbsp;Alemán<input
+					type="checkbox" name="idiomas[3]" value="Alemán">
+					<hr></td>
+			</tr>
+			<tr>
+				<td class="titulo">SELECT:</td>
+			</tr>
+			<tr>
+				<td class="titulo">Simple:</td>
+			</tr>
+			<tr>
+				<td>Año de finalización de estudios: <select
+					name="añoDeCarrera">
+						<option value="2010">Anterior a 2010</option>
+						<option value="2010">2010</option>
+						<option value="2011" selected>2011</option>
+						<option value="2012">2012</option>
+						<option value="2013">2013</option>
+						<option value="2014">2014</option>
+						<option value="2015">2015</option>
+						<option value="2016">2016</option>
+						<option value="2017">2017</option>
+						<option value="2018">2018</option>
+				</select>
+				</td>
+			</tr>
+			<tr>
+				<td class="titulo">Multiple:</td>
+			</tr>
+			<tr>
+				<td>ciudades: <select name="codProvincia[]" multiple>
+						<option value="33">Asturias</option>
+						<option value="17">Gerona</option>
+						<option value="28" selected>Madrid</option>
+						<option value="41">Sevilla</option>
+						<option value="48">Vizcaya</option>
+						<option value="15">A Coruña</option>
+						<option value="20">Guipúzcoa</option>
+						<option value="01">Vitoria</option>
+						<option value="02">Albacete</option>
+				</select>
+					<hr>
+				</td>
+			</tr>
+			<tr>
+				<td class="titulo">TEXTAREA:</td>
+			</tr>
+			<tr>
+				<td>Escriba aquí sus comentarios: <textarea name="comentarios"
+						rows="7" cols="40" placeholder="Este formulario es muy completo"></textarea>
+					<hr>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="reset" value="Resetear el formulario"
+					id="bottom" class="round">&nbsp;&nbsp;&nbsp;<input
+					type="submit" value="Enviar formulario al servidor" id="bottom"
+					class="round"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

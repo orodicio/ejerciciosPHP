@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>01</title>
+<style type="text/css">
+table {
+	width: 24%;
+	font-size: 15px;
+	font-family: sans-serif;
+}
+
+table, th {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+th {
+	text-align: center;
+	color: white;
+	background-color: blue;
+	padding: 3%;
+	text-transform: uppercase;
+	font-size: 20px;
+}
+
+td {
+	text-align: left;
+	color: grey;
+	padding-left: 3%;
+	padding-top: 1%;
+}
+
+#bottom {
+	margin-bottom: 5%;
+	padding-right: 3%;
+}
+
+.round {
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding: 1% 2% 1% 2%;
+}
+
+.arriba {
+	padding-top: 5%;
+}
+
+.abajo {
+	padding-bottom: 3%
+}
+</style>
+</head>
+<body>
+	<form action="http://localhost/ejercicios/Ejercicios_PHP_04/01f.php"
+		method="get">
+		<table>
+			<tr>
+				<th>formulario con controles html5</th>
+			</tr>
+			<tr>
+				<td class="arriba">NUMERO 1: <input type="number"
+					name="numero1" class="round">
+				</td>
+			</tr>
+			<tr>
+				<td>NUMERO 2: 10: <input type="range" name="numero2" min="10"
+					max="100" step="10">100
+				</td>
+			</tr>
+			<tr>
+				<td class="abajo">Estaciones: <input type="text"
+					name="estaciones" class="round" size="30"></td>
+			</tr>
+			<tr>
+				<td>Color favorito: <input type="color" name="colorfav"
+					size="30" class="round"></td>
+			</tr>
+			<tr>
+				<td>Buscar: <input type="search" name="busqueda" class="round"
+					size="30"></td>
+			</tr>
+			<tr>
+				<td>Nombre: <input type="text" name="nombre" class="round"
+					size="30"></td>
+			</tr>
+			<tr>
+				<td>Apellido: <input type="text" name="apellido" class="round"
+					size="30"></td>
+			</tr>
+			<tr>
+				<td>E-mail: <input type="email" name="email" class="round"></td>
+			</tr>
+			<tr>
+				<td>Fecha de Nacimiento: <input type="date" name="fechadenac"
+					class="round"></td>
+			</tr>
+			<tr>
+				<td>Edad: <input type="number" name="numero1" min="0" max="150"
+					class="round"></td>
+			</tr>
+			<tr>
+				<td>Pagina personal: <input type="url" name="paginaPeersonal"
+					class="round" size="30"></td>
+			</tr>
+			<tr>
+				<td>Horario: De: <input type="time" name="horario1"
+					class="round"> a: <input type="time" name="horario2"
+					class="round"></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Enviar Consulta" id="bottom"
+					class="round"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
+
+
+
+
