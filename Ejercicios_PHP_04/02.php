@@ -48,6 +48,7 @@ background-color:green;
 	<td><button type="submit" name="operacion" value="/">/</button></td>
     </tr>
 <?php
+
 function recoge($var)
 {
     $tmp = (isset($_REQUEST[$var]))
