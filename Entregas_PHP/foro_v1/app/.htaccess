@@ -1,0 +1,7 @@
+AuthName "Zona privada"
+
+AuthType Basic
+
+AuthUserFile /home/orodicio/Documentos/2DAW/DESARROLLO_WEB_EN_SERVIDOR/PHP/.htpasswd
+
+require valid-user
